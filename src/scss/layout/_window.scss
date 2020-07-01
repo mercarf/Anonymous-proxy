@@ -1,0 +1,79 @@
+.window {
+  font-size: rem(18);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+  .wrapper {
+    max-width: $desktop; /* Comulna central para que no se deforme en dispositivos grandes */
+
+    .window-note {
+      font-weight: 100;
+      color: $color-note;
+      text-transform: capitalize;
+      font-size: rem(14);
+    }
+    .window-title {
+      text-transform: capitalize;
+      padding-bottom: 15px;
+      font-size: rem(24);
+    }
+
+    .window-button {
+      width: 76px;
+      height: 45px;
+      border-radius: 25px;
+      border: 2px solid $color-button;
+      background-color: $color-white;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-size: rem(18);
+      :hover {
+        background-color: $color-button;
+        color: $color-white;
+        border-radius: 25px;
+        font-size: 20px;
+        -webkit-transition: background-color 0.5s linear;
+        -moz-transition: background-color 0.5s linear;
+        -ms-transition: background-color 0.5s linear;
+        -o-transition: background-color 0.5s linear;
+        transition: background-color 0.5s linear;
+      }
+
+      a {
+        font-family: $font-title;
+        color: $color-button;
+        padding: 12px 25px;
+      }
+    }
+    @include tablet {
+      padding: 30px 40px;
+
+      .window-title {
+        padding-bottom: 30px;
+        font-size: rem(26);
+        p {
+          font-size: rem(20);
+        }
+      }
+    }
+    @include desktop {
+      padding: 60px 275px;
+      .window-note {
+        font-size: rem(16);
+      }
+      .window-title {
+        font-size: rem(32);
+      }
+
+      .window-button {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

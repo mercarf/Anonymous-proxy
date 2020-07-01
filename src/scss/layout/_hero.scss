@@ -1,0 +1,120 @@
+.page__hero {
+  height: 100vh;
+  background: url(../images/cover.jpg) no-repeat;
+  background-position: center top;
+  background-size: cover;
+  color: $color-white;
+  padding-bottom: 53px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  @include tablet {
+    padding-bottom: 45px;
+    padding-left: 40px;
+  }
+  @include tablet {
+    padding-bottom: 13px;
+  }
+
+  .wrapper {
+    max-width: $desktop; /* Comulna central para que no se deforme en dispositivos grandes */
+
+    .header-title {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      .animation {
+        /* Animación al iniciar el navegador para introducit el titulo principal */
+        animation-duration: 0.5s;
+        animation-name: intro;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        @keyframes intro {
+          from {
+            transform: translate(-500px, 0px);
+            opacity: 0;
+          }
+
+          to {
+            opacity: 1;
+          }
+        }
+      }
+
+      .h1 {
+        font-size: rem(42);
+        font-family: $font-title;
+        text-transform: uppercase;
+        font-stretch: normal;
+        margin: 0;
+      }
+      .h4 {
+        font-size: rem(16);
+        font-weight: normal;
+        margin-top: 10px;
+      }
+
+      span {
+        display: block;
+      }
+
+      .header-button {
+        width: 45px;
+        height: 45px;
+        background-color: $color-white;
+        border-color: none;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 45px;
+        /* Animación del botón hacia abajo al abrir el navegador */
+        animation: fadeInDownBig;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        :hover {
+          animation: flash;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+        }
+
+        a {
+          padding: 12px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    @include tablet {
+      .header-title {
+        .h1 {
+          font-size: rem(80);
+        }
+
+        .h4 {
+          font-size: rem(24);
+          margin-top: 20px;
+        }
+
+        .header-button {
+          margin-top: 30px;
+        }
+      }
+    }
+    @include desktop {
+      .header-title {
+        .h1 {
+          font-size: rem(100);
+        }
+        .h4 {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

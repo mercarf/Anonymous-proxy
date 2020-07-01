@@ -1,0 +1,103 @@
+.page__footer {
+  background-color: $color-primary;
+  color: $color-white;
+  font-size: rem(16);
+  line-height: 2;
+
+  .wrapper {
+    /* Comulna central para que no se deforme en dispositivos grandes */
+    height: 465px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 45px;
+    position: relative;
+    max-width: $desktop;
+    margin: auto;
+    a {
+      color: $color-white;
+      font-weight: 300;
+    }
+    .footer-menu {
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      :hover {
+        color: $color-button;
+      }
+    }
+
+    .footer-copy {
+      font-size: rem(14);
+      span {
+        display: block;
+      }
+
+      i {
+        display: inline-block;
+        text-align: center;
+        color: $color-button;
+      }
+    }
+
+    .footer-button {
+      width: 45px;
+      height: 45px;
+      background-color: $color-white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-24px, -24px);
+      padding: 12px;
+      /* sombra botón */
+      -webkit-box-shadow: 0 2px 4px 0 $color-black;
+      -moz-box-shadow: 0 2px 4px 0 $color-black;
+      box-shadow: 0 2px 4px 0 $color-black;
+      :hover {
+        /* Animación */
+        animation: flash;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+    @include tablet {
+      height: 240px;
+      padding: 45px 40px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+
+      .footer-menu {
+        margin-right: 50px;
+      }
+
+      .footer-copy {
+        order: -1;
+      }
+      .footer-button {
+        margin-left: auto;
+      }
+    }
+    @include desktop {
+      padding: 45px 370px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+      .footer-menu {
+        margin-right: 0px;
+      }
+    }
+  }
+}

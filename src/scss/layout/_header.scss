@@ -1,0 +1,29 @@
+.page__header {
+  .wrapper {
+    max-width: $desktop; /* Comulna central para que no se deforme en dispositivos grandes */
+    .header-menu {
+      background-color: $color-secondary;
+      width: 44px;
+      height: 44px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 13px;
+
+      &:hover {
+        background-color: $color-button;
+        color: $color-white;
+        /* Transición de cambio de color con 0.5s para que el cambio no sea tan brusco */
+        -webkit-transition: background-color 0.5s linear;
+        -moz-transition: background-color 0.5s linear;
+        -ms-transition: background-color 0.5s linear;
+        -o-transition: background-color 0.5s linear;
+        transition: background-color 0.5s linear;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
