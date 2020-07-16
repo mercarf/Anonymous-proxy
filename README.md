@@ -24,6 +24,9 @@ Este menú de hamburguesa no despliega ningún submenú.
 2. Primer módulo (Anonymous proxy): está maquetado con flexbox y ocupa el alto de la ventana del navegador.
 3. Segundo módulo (Looking Through A Window): maquetado con flexbox de nuevo utilizando las dimensiones dadas.
 4. Tercer módulo (3 Reasons To Purchase): los 3 elementos del listado están maquetados con CSS Grid en todos los tamaños de pantalla.
+
+![3reasons](./info-readme/3reasons.PNG)
+
 5. Cuarto módulo (footer): está maquetado usando flexbox. 
 
 Todos los textos de la columna "ARTICLES" y todos los textos de la columna "TWITTER" son enlaces a la página de Adalab.
@@ -37,4 +40,17 @@ En total, hay 3 interacciones que podemos realizar en la página:
 3. En el **hover** de los botones ("Go" y "3 Reasons To Purchase") hemos incluído una transición de tamaño y color.
 4. También hemos añadido una pequeña animación en el botón del footer al posarnos encima con el ratón.
 
-![Anonymous Proxy web](./info-readme/anonymous-proxy-web.PNG)
+#### Imágenes de muestra
+
+Versión móvil:
+
+![mobile1](./info-readme/mobile1.PNG)
+![mobile2](./info-readme/mobile2.PNG)
+
+Versión tablet:
+
+![tablet](./info-readme/tablet.PNG)
+
+Versión desktop:
+
+![desktop](./info-readme/desktop.PNG)
